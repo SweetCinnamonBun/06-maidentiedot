@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+const api_key = import.meta.env.VITE_SOME_KEY;
 
 import "./App.css";
 
@@ -29,14 +30,12 @@ const Country = ({ country, getWeatherData, weather }) => {
 };
 
 const Weather = ({ country, weather, getWeatherData }) => {
-  const apiKey = "9579c02081e7e4205ff7382ac3a9378f";
-  console.log(import.meta.env.VITE_SOME_KEY);
   const lat = country[0].latlng[0];
   const lon = country[0].latlng[1];
   console.log(weather);
   // console.log(apiKey);
   console.log(lat);
-  getWeatherData(lat, lon, apiKey);
+  getWeatherData(lat, lon, api_key);
 
   if (weather === null) {
     return <p>no weather</p>;
@@ -92,7 +91,6 @@ const Countries = ({ countries, setFilterString, weather, getWeatherData }) => {
 };
 
 function App() {
-  const [count, setCount] = useState(0);
   const [countries, setCountries] = useState(null);
   const [filterString, setFilterString] = useState("");
   const [weather, setWeather] = useState(null);
