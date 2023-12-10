@@ -35,3 +35,80 @@ body {
 .type-in-search {
   font-size: 1.8rem;
 }
+
+.country {
+  width: 550px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3.6rem;
+  background-color: #bdd5f5;
+  padding: 2rem 1rem;
+  border-radius: 0.8rem;
+}
+
+.upper-container {
+  order: 1;
+}
+
+.upper-container img {
+  margin-top: 1rem;
+}
+
+.name {
+  font-size: 3.2rem;
+}
+
+.capital {
+  font-size: 1.8rem;
+}
+
+.area {
+  font-size: 1.8rem;
+}
+
+.languages {
+  font-size: 1.8rem;
+}
+
+.languages-ul {
+  font-size: 1.6rem;
+}
+
+.weather {
+  font-size: 2.4rem;
+  margin-top: 3.2rem;
+}
+
+.temperature {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.weather-img {
+  display: flex;
+  justify-content: center;
+}
+
+.wind {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.too-many-matches {
+  font-size: 1.8rem;
+}
+
+.filter-country {
+  font-size: 1.8rem;
+}
+
+.filter-country > * {
+  padding-block-end: 1rem;
+}
+
+.filter-btn {
+  border: none;
+  padding: 0.7rem 0.8rem;
+  background-color: rgb(132, 251, 251);
+  border-radius: 1rem;
+}
