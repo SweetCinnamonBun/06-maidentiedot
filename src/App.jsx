@@ -140,12 +140,15 @@ function App() {
   };
 
   // gets the filtered result of the countries, based on the filter string that was provided
-  const filteredCountries =
-    filterString !== ""
-      ? countries.filter((country) =>
-          country.name.common.toLowerCase().includes(filterString.toLowerCase())
-        )
-      : [];
+
+  let filteredCountries;
+  if (filterString !== "") {
+    filteredCountries = countries.filter((country) =>
+      country.name.common.toLowerCase().includes(filterString.toLowerCase())
+    );
+  } else {
+    filteredCountries = [];
+  }
 
   // runs if the weather data has not yet been loaded
   if (!countries) {
